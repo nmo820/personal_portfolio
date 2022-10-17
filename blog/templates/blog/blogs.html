@@ -1,0 +1,20 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1 id="blogtitle" class="font-weight-bold text-center">nmgen Blog</h1>
+
+<h3 class="text-center mb-5 text-muted">Total: {{ blogs.count }} post{{ blogs.count|pluralize }}</h3>
+
+{% for blog in blogs %}
+  <hr>
+  <div class="row justify-content-center my-3">
+      <div class="col-md-10">
+      <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+      <h5 class="text-muted">{{ blog.date|date:'Y/m/d D'|upper }}</h5>
+      <p>{{ blog.description|striptags|truncatechars:50 }}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
