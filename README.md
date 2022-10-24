@@ -1,10 +1,10 @@
 # personal_portfolio
 
-◆使用した技術やツール
-・Atom
+◆使用した技術やツール  
+・Atom  
 ・Python  
-　　- pillow
-・Django
-・Bootstrap
-・Git
-・Github
+　　- pillow  
+・Django  
+・Bootstrap  
+・Git  
+・Github  
